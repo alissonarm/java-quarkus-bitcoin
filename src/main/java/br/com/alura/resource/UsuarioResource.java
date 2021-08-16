@@ -22,8 +22,8 @@ public class UsuarioResource {
 	@Transactional
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void inserir(Usuario usuario) {
-//		Usuario.persist(usuario);
-		Usuario.adicionar(usuario);
+//		Usuario.persist(usuario);         -- Persiste sem validar
+		Usuario.adicionar(usuario);       // Realiza validações antes de chamar o método persist.
 	}
 	
 	@GET

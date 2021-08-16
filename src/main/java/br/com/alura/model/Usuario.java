@@ -59,7 +59,7 @@ public class Usuario extends PanacheEntityBase {
 		return username;
 	}
 
-	@JsonbTransient       
+	@JsonbTransient                    // não devolve esta informação para o usuario - desconsidera a  informação 
 	public String getPassword() {
 		return password;
 	}

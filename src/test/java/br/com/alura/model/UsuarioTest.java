@@ -14,17 +14,17 @@ import io.quarkus.test.junit.QuarkusTest;
 @QuarkusTest
 public class UsuarioTest {
 
-		@Test
-		public void testarSeFindByIdOptionaRetornaUsuarioCorreto() {
-			PanacheMock.mock(Usuario.class);
-			
-			Usuario u = new Usuario();
-			
-			Optional<PanacheEntityBase> usuario = Optional.of(u);
-			
-			Mockito.when(Usuario.findByIdOptional(4)).thenReturn(usuario);
-			
-			Assertions.assertSame(u, Usuario.findByIdOptional(4).get());
-			
-		}
+	@Test
+	public void testarSeFindByIdOptionaRetornaUsuarioCorreto() {
+		PanacheMock.mock(Usuario.class);
+
+		Usuario u = new Usuario();
+
+		Optional<PanacheEntityBase> usuario = Optional.of(u);
+
+		Mockito.when(Usuario.findByIdOptional(9)).thenReturn(usuario);
+
+		Assertions.assertSame(u, Usuario.findByIdOptional(9).get());
+
+	}
 }

@@ -8,9 +8,9 @@ import io.restassured.RestAssured;
 @QuarkusTest
 public class BitcoinResourceTest {
 	
-//	@Test
-//	public void testarSeStatusCodeDaRequisicaoE200() {
-//		RestAssured.given().get("bitcoins").then().statusCode(200);
-//	}
+	@Test
+	public void testarSeStatusCodeDaRequisicaoE200() {
+		RestAssured.given().get("bitcoins").then().statusCode(200);
+	}
 
 }

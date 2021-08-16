@@ -19,8 +19,8 @@ public class OrdemService {
 	OrdemRepository ordemRepository;
 	
 	public void inserir(SecurityContext securityContext, Ordem ordem) {
-		Optional<Usuario> usuarioOptional = Usuario.findByIdOptional(ordem.getUserId());
-		Usuario usuario = usuarioOptional.orElseThrow();
+		Optional<Usuario> usuarioOptional = Usuario.findByIdOptional(ordem.getUserId()); //pesquisa o usuario com UserId(pode ou não existir) 
+		Usuario usuario = usuarioOptional.orElseThrow();                                 // se existir move para usuario, senão lança a exceção 
 		
 		if(!usuario.getUsername().equals(securityContext.getUserPrincipal().getName())){
 			throw new RuntimeException("O usuario logado e diferente do userId");
